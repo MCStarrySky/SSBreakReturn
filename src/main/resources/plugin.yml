@@ -1,0 +1,7 @@
+name: SSBreakReturn
+version: ${project.version}
+main: me.mical.ssbreakreturn.SSBreakReturn
+api-version: 1.16
+authors: [ Mical ]
+commands:
+  ssbreakreturn:

@@ -1,0 +1,5 @@
+Plugin:
+  Prefix: "&9&lSSBreakReturn"
+  INFO: "&a>> "
+  WARN: "&e>> "
+  ERROR: "&c>> "
