@@ -72,7 +72,7 @@ public class BuildingControl {
                         if (!inventoryBlocks.contains(material)) {
                             pass = false;
                             inventoryBlocks.add(material);
-                            I18n.send(user, plugin.getLang().data.build(I18n.Type.WARN, "区域内存在可存放物品的方块(&c" + material.name() + "&7), 清空建筑失败."));
+                            I18n.send(user, plugin.getLang().data.build(I18n.Type.WARN, "区域内存在可存放物品的方块(&c" + material.name() + "&r), 清空建筑失败."));
                         }
                     }
                 }
@@ -83,7 +83,7 @@ public class BuildingControl {
                         if (!inventoryBlocks.contains(material)) {
                             pass = false;
                             inventoryBlocks.add(material);
-                            I18n.send(user, plugin.getLang().data.build(I18n.Type.WARN, "区域内存在可存放物品的方块(&c" + material.name() + "&7), 清空建筑失败."));
+                            I18n.send(user, plugin.getLang().data.build(I18n.Type.WARN, "区域内存在可存放物品的方块(&c" + material.name() + "&r), 清空建筑失败."));
                             continue root_loop;
                         }
                     }
@@ -97,7 +97,7 @@ public class BuildingControl {
                             if (!inventoryBlocks.contains(material)) {
                                 pass = false;
                                 inventoryBlocks.add(material);
-                                I18n.send(user, plugin.getLang().data.build(I18n.Type.WARN, "区域内存在可存放物品的方块(&c" + material.name() + "&7), 清空建筑失败."));
+                                I18n.send(user, plugin.getLang().data.build(I18n.Type.WARN, "区域内存在可存放物品的方块(&c" + material.name() + "&r), 清空建筑失败."));
                                 continue root_loop;
                             }
                         }
@@ -111,7 +111,7 @@ public class BuildingControl {
         if (pass) {
             I18n.send(user, plugin.getLang().data.build(I18n.Type.INFO, "方块数量统计:"));
             for (Material material : blocks.keySet()) {
-                String report = " &c" + material + " &7▶ " + "&c" + blocks.get(material) + " &7块.";
+                String report = " &c" + material + " &r▶ " + "&c" + blocks.get(material) + " &r块.";
                 I18n.send(user, I18n.color(report));
             }
 

@@ -18,10 +18,10 @@ public class SelectCommand extends BaseCommand {
     protected void call(String[] args) {
         if (!TempStorage.getDataMap().containsKey(user.getUniqueId()) || !TempStorage.getDataMap().get(user.getUniqueId())) {
             TempStorage.getDataMap().put(user.getUniqueId(), true);
-            I18n.send(user, plugin.getLang().data.build(I18n.Type.INFO, "已开启选区模式"));
+            I18n.send(user, plugin.getLang().data.build(I18n.Type.INFO, "已开启选区模式."));
         } else if (TempStorage.getDataMap().get(user.getUniqueId())) {
             TempStorage.getDataMap().put(user.getUniqueId(), false);
-            I18n.send(user, plugin.getLang().data.build(I18n.Type.INFO, "已关闭选区模式"));
+            I18n.send(user, plugin.getLang().data.build(I18n.Type.INFO, "已关闭选区模式."));
         }
     }
 }
