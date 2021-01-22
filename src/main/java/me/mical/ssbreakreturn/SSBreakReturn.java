@@ -25,7 +25,7 @@ public final class SSBreakReturn extends PPlugin {
         super.onDisable();
     }
 
-    private CoreProtectAPI getCoreProtect() {
+    public CoreProtectAPI getCoreProtect() {
         Plugin plugin = getServer().getPluginManager().getPlugin("CoreProtect");
 
         // Check that CoreProtect is loaded

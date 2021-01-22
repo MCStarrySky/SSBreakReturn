@@ -116,6 +116,13 @@ public class BuildingControl {
             }
 
             region.forEach(blockVector3 -> BukkitAdapter.adapt(world, blockVector3).getBlock().setType(Material.AIR));
+            if (Objects.nonNull(plugin.getCoreProtect())) {
+                for (BlockVector3 v : region) {
+                    Material m = BukkitAdapter.adapt(user.getWorld(), v).getBlock().getType();
+                    plugin.getCoreProtect().logRemoval("#[SSBreakReturn]" + user.getName(), new Location(user.getWorld(), v.getBlockX(), v.getBlockY(), v.getBlockZ()), m, new Location(user.getWorld(), v.getBlockX(), v.getBlockY(), v.getBlockZ()).getBlock().getBlockData());
+                }
+            }
+
 
             I18n.send(user, plugin.getLang().data.build(I18n.Type.INFO, "清空区域成功, 原材料将添加至您的背包. 如果您的背包已满, 会丢在地上."));
             blocks.forEach((material, integer) -> {
